@@ -5,9 +5,6 @@ git clone https://github.com/dense-analysis/ale.git ~/.config/nvim/pack/dense-an
 # Activate copilot by entering :Copilot setup in vim and copying the token to the following link for the token: https://github.com/login/device
 git clone --depth=1 https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
 
-# LazyGit.nvim, A simple Neovim wrapper around LazyGit
-git clone https://github.com/kdheepak/lazygit.nvim.git ~/.config/nvim/pack/kdheepack/start/lazygit.nvim
-
 # NERDTree, A tree explorer plugin for navigating the filesystem
 git clone https://github.com/preservim/nerdtree.git ~/.config/nvim/pack/preservim/start/nerdtree
 

@@ -39,7 +39,3 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 " vim-autoformat
 autocmd BufWritePre *.go Autoformat
 autocmd BufWritePre *.py Autoformat
-
-
-
-
