@@ -2,6 +2,13 @@
 
 My personal neovim setup.
 
+To get the dependencies, run the following commands:
+
+```bash
+cd neovim-setup
+bash get_dependencies.sh
+```
+
 To compile Neovim from source, run the following commands:
 
 ```bash
