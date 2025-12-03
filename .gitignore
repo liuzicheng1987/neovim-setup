@@ -1,1 +1,4 @@
 neovim
+bin
+pkg
+*.tar.gzz
