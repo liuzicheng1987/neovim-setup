@@ -28,17 +28,28 @@ vim.diagnostic.config({
     severity_sort = true,
 })
 
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)      -- Go to definition
+vim.keymap.set('n', 'gr', vim.lsp.buf.references)       -- Find references
+vim.keymap.set('n', 'K', vim.lsp.buf.hover)             -- Show documentation
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)   -- Rename symbol
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action) -- Code actions
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)   -- Go to implementation
+vim.keymap.set('n', '<leader>f', function()
+  vim.lsp.buf.format({ async = true })
+end)                                                     -- Format file
+
+
+vim.lsp.enable('cpp_llm_code_completion')
+vim.lsp.enable('go_llm_code_completion')
+vim.lsp.enable('python_llm_code_completion')
+vim.lsp.enable('rust_llm_code_completion')
+
 vim.lsp.enable('cpp_clangd')
 vim.lsp.enable('go_gopls')
 vim.lsp.enable('python_ruff')
 vim.lsp.enable('python_pyrefly')
 vim.lsp.enable('python_ty')
 vim.lsp.enable('rust_rust_analyzer')
-
-vim.lsp.enable('cpp_llm_code_completion')
-vim.lsp.enable('go_llm_code_completion')
-vim.lsp.enable('python_llm_code_completion')
-vim.lsp.enable('rust_llm_code_completion')
 
 -- set autocomplete behavior.
 --   fuzzy = fuzzy search in results
