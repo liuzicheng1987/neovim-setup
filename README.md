@@ -20,7 +20,7 @@ To install the packages, run the following commands:
 
 ```bash
 cd neovim-setup
-bash install.sh 
+bash install.sh
 ```
 
 ## Copilot Setup
@@ -59,10 +59,16 @@ export PATH=$PATH:/usr/local/go/bin
 
 Then, go to ~/go and open Neovim to install the Go packages.
 
-Then, go to your home directory and open .bashrc to add the following lines:
+Then, go to your home directory and open .bashrc to add the following line:
 
-```bash 
-export PATH=$PATH:/usr/local/go/bin:~/go/bin
+```bash
+export PATH=$PATH:/usr/local/go/bin
+```
+
+You might have to install gopls separately. To do that, run the following command:
+
+```bash
+go install golang.org/x/tools/gopls@latest
 ```
 
 ## Lazygit Setup

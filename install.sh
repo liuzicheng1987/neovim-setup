@@ -1,3 +1,5 @@
+rm -rf ~/.config/nvim
+
 mkdir -p ~/.config/nvim/lsp
 mkdir -p ~/.config/nvim/lua/config
 mkdir -p ~/.config/nvim/lua/plugins

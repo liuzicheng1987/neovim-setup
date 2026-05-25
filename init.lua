@@ -21,6 +21,7 @@ vim.lsp.config('*', {
   root_markers = { '.git' },
 })
 
+vim.lsp.enable('go_gopls')
 vim.lsp.enable('python_ruff')
 vim.lsp.enable('python_pyrefly')
 vim.lsp.enable('python_ty')
@@ -46,7 +47,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.lsp.completion.enable(true, clientID, 0, { autotrigger = true })
     end,
 })
-
 
 -- open hover info when pressing <F2> in normal mode
 vim.keymap.set('n', '<F2>', function()
