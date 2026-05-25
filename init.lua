@@ -21,6 +21,14 @@ vim.lsp.config('*', {
   root_markers = { '.git' },
 })
 
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
+
+vim.lsp.enable('cpp_clangd')
 vim.lsp.enable('go_gopls')
 vim.lsp.enable('python_ruff')
 vim.lsp.enable('python_pyrefly')
