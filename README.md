@@ -79,4 +79,18 @@ To install lazygit, run the following commands:
 go install github.com/jesseduffield/lazygit@latest
 ```
 
+# Rust Setup
+
+To install Rust, run the following command:
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rust-analyzer
+```
+
+Then, go to your home directory and open .bashrc to add the following line:
+
+```bash
+export PATH="$HOME/.cargo/bin:$PATH"
+```
 
