@@ -23,22 +23,6 @@ cd neovim-setup
 bash install.sh
 ```
 
-## Copilot Setup
-
-Exit the terminal and open a new one. Then, run:
-
-```bash
-nvm install node
-```
-
-Then, open neovim and run `:Copilot setup` to complete the Copilot installation. Copy the generated token and paste it to https://github.com/login/device.
-
-To install the copilot CLI, run the following commands:
-
-```bash
-npm install -g @githubnext/github-copilot-cli
-```
-
 ## Go Setup
 
 To install Go, run the following commands:
