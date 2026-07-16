@@ -78,3 +78,36 @@ Then, go to your home directory and open .bashrc to add the following line:
 export PATH="$HOME/.cargo/bin:$PATH"
 ```
 
+# OpenCode Setup
+
+```bash
+sudo apt-get install npm
+sudo npm install opencode-ai
+```
+
+cd to .config/opencode. It should contain opencode.json or opencode.jsonc. Insert the following (you can replace the model with something else):
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "*": "ask",
+    "read": "allow"
+  },
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:1234/v1"
+      },
+      "models": {
+        "qwen/qwen3.6-35b-a3b": {
+          "name": "qwen3.6-35b-a3b (local)"
+        }
+      }
+    }
+  }
+}
+```
+
