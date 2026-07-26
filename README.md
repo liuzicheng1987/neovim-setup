@@ -78,6 +78,12 @@ Then, go to your home directory and open .bashrc to add the following line:
 export PATH="$HOME/.cargo/bin:$PATH"
 ```
 
+# llama.cpp setup for llama.vim
+
+```bash
+llama-server --hf-repo ggml-org/Qwen2.5-Coder-14B-Instruct-Q8_0-GGUF --hf-file qwen2.5-coder-14b-instruct-q8_0.gguf -c 32768 --port 8012
+```
+
 # OpenCode Setup
 
 ```bash
