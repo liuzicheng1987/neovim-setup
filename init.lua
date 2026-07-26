@@ -5,7 +5,6 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.wo.number = true
-
 -- remove trailing whitespace on save
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
@@ -38,12 +37,6 @@ vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format({ async = true })
 end)                                                     -- Format file
 
-
-vim.lsp.enable('cpp_llm_code_completion')
-vim.lsp.enable('go_llm_code_completion')
-vim.lsp.enable('python_llm_code_completion')
-vim.lsp.enable('rust_llm_code_completion')
-
 vim.lsp.enable('cpp_clangd')
 vim.lsp.enable('go_gopls')
 vim.lsp.enable('python_ruff')
@@ -68,14 +61,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.lsp.completion.enable(true, clientID, 0, { autotrigger = true })
     end,
 })
-
--- open hover info when pressing <F2> in normal mode
-vim.keymap.set('n', '<F2>', function()
-    vim.lsp.buf.hover()
-end)
-
--- open autocomplete menu when pressing <F2> in insert mode
-vim.keymap.set('i', '<F2>', function()
-    vim.lsp.completion.get()
-end)
 
