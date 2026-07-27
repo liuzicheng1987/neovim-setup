@@ -101,15 +101,19 @@ cd to .config/opencode. It should contain opencode.json or opencode.jsonc. Inser
     "read": "allow"
   },
   "provider": {
-    "lmstudio": {
+    "llama.cpp": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "LM Studio (local)",
+      "name": "llama-server (local)",
       "options": {
-        "baseURL": "http://127.0.0.1:1234/v1"
+        "baseURL": "http://127.0.0.1:8080/v1"
       },
       "models": {
-        "qwen/qwen3.6-35b-a3b": {
-          "name": "qwen3.6-35b-a3b (local)"
+        "qwen3.6-35b-a3b": {
+          "name": "qwen3.6-35b-a3b (local)",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          }
         }
       }
     }
