@@ -97,8 +97,7 @@ cd to .config/opencode. It should contain opencode.json or opencode.jsonc. Inser
 {
   "$schema": "https://opencode.ai/config.json",
   "permission": {
-    "*": "ask",
-    "read": "allow"
+    "*": "allow"
   },
   "provider": {
     "llama.cpp": {
@@ -110,6 +109,20 @@ cd to .config/opencode. It should contain opencode.json or opencode.jsonc. Inser
       "models": {
         "qwen3.6-35b-a3b": {
           "name": "qwen3.6-35b-a3b (local)",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          }
+        },
+        "qwen3.8-27b": {
+          "name": "qwen3.8-27b (local)",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          }
+        },
+        "ornith1.5-35b-a3b": {
+          "name": "ornith1.5-35b-a3b (local)",
           "limit": {
             "context": 128000,
             "output": 65536
