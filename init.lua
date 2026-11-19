@@ -62,3 +62,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
+-- Spell checking
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_gb', 'de_de' }
